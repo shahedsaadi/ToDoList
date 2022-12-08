@@ -7,16 +7,23 @@
 
   <div class="box">
 
-      <% for(var i=0; i<newListItems.length; i++){ %>
-        <div class="item">
-          <input type="checkbox">
-          <p><%= newListItems[i] %></p>
-        </div>
-      <% } %>
+<%# arrayName(newListItems crosponding foundItems).forEach(function(single array item){}) %>
+  <% newListItems.forEach(function(item){ %>
 
+ <%# this rout responsible for deleting checked item %>
+    <form action="/delete" method="post">
+    <div class="item">
+      <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+      <p><%= item.name %></p>
+    </div>
+    <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+    </form>
+  <% }) %>
+
+<!-- this rout responsible for adding item -->
       <form class="item" action="/" method="post">
         <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-        <button type="submit" name="list" value=<%= listTitle %>>+</button>
+        <button type="submit" name="list" value="<%= listTitle %>">+</button>
       </form>
 
   </div>
