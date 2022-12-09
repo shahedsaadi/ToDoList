@@ -1,6 +1,6 @@
 ### Overview
 
-To Do List  app , the home page shows the current date and month at the top, user can get to add new items which will get added to the list and also user can get to check off the list items.
+To Do List app, the home page includes the default list, so the user can add new items to the list, which gets added to the database, also can delete them by checking off the checkbox, and will be removed as well. The user can create custom lists, for example, writing (http://localhost:3000/shopping) will have a new list with a new title and three default items, so this will have the same functionalities as the home page.
 
 #### Technology Stack:
 
@@ -11,9 +11,12 @@ To Do List  app , the home page shows the current date and month at the top, use
 - JavaScript.
 - Expressjs.
 - EJS.
+- MongoDB.
 
 #### To run the project:
 
 - Run npm install.
 - Run node app.js.
 - Visit the link http://localhost:3000/
+
+ 
